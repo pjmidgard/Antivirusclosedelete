@@ -17,18 +17,40 @@ with open(namez1, "rb") as binary_file:
             while z<xc:
                 sda="0"+sda
                 z=z+1
-        NumToGuess = random.randint(0, 255)
-        sdas=sda[0:8]
+        sdas=sda[0:256]
         sdasb=int(sdas,2)
-        if sdasb==NumToGuess:
+with open("save.txt", "rb") as binary_file:
+    data1 = binary_file.read()
+    s=str(data1)
+    lenf1=len(data1)
+    sda=bin(int(binascii.hexlify(data1),16))[2:]
+    lenf=len(sda)      
+    lenf1=len(data1) 
+    xc=(lenf1*8)-lenf
+    z=0
+    if xc!=0:
+        while z<xc:
+            sda="0"+sda
+            z=z+1
+    ww1=0
+    ww2=0
+    while ww2<lenf1:
+        ww1=ww2
+        ww2=ww2+256
+        sdas1=sda[ww1:ww2]
+        sdasb1=int(sdas1,2)
+        print(sdasb1)
+        print(sdasb)
+        if sdasb1==sdasb:
             closem=1
-time.sleep(2)
-if closem==1:
-    print("Malware deleted")
-    CREATE_NO_WINDOW = 0x08000000
-    subprocess.call(nemez, creationflags=CREATE_NO_WINDOW)
-    os.remove(namez1)
-if closem==0:
-    print("Malware has not founded")
+            time.sleep(2)
+            if closem==1:
+                print("Malware deleted")
+                CREATE_NO_WINDOW = 0x08000000
+                subprocess.call(nemez, creationflags=CREATE_NO_WINDOW)
+                os.remove(namez1)
+                raise SystemExit
+        else:
+            print("Malware has not founded")
     
 
