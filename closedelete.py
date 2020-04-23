@@ -34,7 +34,7 @@ with open("save.txt", "rb") as binary_file:
             z=z+1
     ww1=0
     ww2=0
-    while ww2<lenf1:
+    while ww2<lenf:
         ww1=ww2
         ww2=ww2+256
         sdas1=sda[ww1:ww2]
