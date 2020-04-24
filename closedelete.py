@@ -1,4 +1,4 @@
-import subprocess, os, time, random, binascii
+import subprocess, os, time, binascii
 closem=0
 namez1 = input("Please, enter name of malware/software? ")
 nemez='taskkill /F /IM '+namez1
