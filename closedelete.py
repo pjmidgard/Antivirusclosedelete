@@ -40,19 +40,15 @@ with open("save.txt", "rb") as binary_file:
         ww2=ww2+256
         sdas1=sda[ww1:ww2]
         sdasb1=int(sdas1,2)
-        print(sdasb1)
-        print(sdasb)
         if sdasb1==sdasb:
-            closem=1
-            time.sleep(2)
-            if closem==1:
-                print("Malware deleted")
-                CREATE_NO_WINDOW = 0x08000000
-                subprocess.call(nemez, creationflags=CREATE_NO_WINDOW)
-                os.remove(namez1)
-                raise SystemExit
-        else:
-            closem=0
-            print("Malware has not founded")
+            closem=closem+1
+if closem>0:
+    print("Malware deleted")
+    CREATE_NO_WINDOW = 0x08000000
+    subprocess.call(nemez, creationflags=CREATE_NO_WINDOW)
+    os.remove(namez1)
+    raise SystemExit
+else:
+    print("Malware has not founded")
     
 
