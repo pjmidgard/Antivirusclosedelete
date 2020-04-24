@@ -19,7 +19,7 @@ with open(namez1, "rb") as binary_file:
                 z=z+1
         sdas=sda[0:256]
         sdasb=int(sdas,2)
-with open("save.txt", "rb") as binary_file:
+with open("save.bin", "rb") as binary_file:
     data1 = binary_file.read()
     s=str(data1)
     lenf1=len(data1)
