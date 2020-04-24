@@ -52,6 +52,7 @@ with open("save.txt", "rb") as binary_file:
                 os.remove(namez1)
                 raise SystemExit
         else:
+            closem=0
             print("Malware has not founded")
     
 
