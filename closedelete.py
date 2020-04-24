@@ -32,9 +32,10 @@ with open("save.txt", "rb") as binary_file:
         while z<xc:
             sda="0"+sda
             z=z+1
+    lenf2=len(sda) 
     ww1=0
     ww2=0
-    while ww2<lenf:
+    while ww2<lenf2:
         ww1=ww2
         ww2=ww2+256
         sdas1=sda[ww1:ww2]
