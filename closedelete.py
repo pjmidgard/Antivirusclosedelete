@@ -50,5 +50,6 @@ if closem>0:
     raise SystemExit
 else:
     print("Malware has not founded")
-    
+os.system("pause")
+
 
