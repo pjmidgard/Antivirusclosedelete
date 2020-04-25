@@ -49,7 +49,6 @@ for namez1 in glob.glob("*exe"):
 		subprocess.call(nemez, creationflags=CREATE_NO_WINDOW)
 		os.remove(namez1)
 		closem=0
-	
 	else:
 		print("Malware has not founded")
 	def destroy(plat):
