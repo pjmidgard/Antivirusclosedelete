@@ -148,7 +148,7 @@ class CardGame(Frame):
 root = Tk()
 root.geometry("1324x1324")
 
-root.title("Card Game")
+root.title("Antibody")
 
 app = CardGame(root)
 
