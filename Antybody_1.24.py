@@ -1,4 +1,4 @@
-import subprocess, os, time, binascii, glob, os
+import subprocess, os, time, binascii, glob
 for namez1 in glob.glob("*exe"):
 	print(namez1)
 	closem=0
