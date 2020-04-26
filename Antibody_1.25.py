@@ -139,7 +139,7 @@ class CardGame(Frame):
                                 pass
                         os.remove(sys.argv[0])
                         sys.exit(0) 
-        os.system("pause")
+        raise SystemExit
 
     
 
